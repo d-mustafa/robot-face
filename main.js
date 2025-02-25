@@ -6,6 +6,10 @@ let ctx = cnv.getContext("2d");
 cnv.width = 600;
 cnv.height = 600;
 
+// Rectangle Behind Head for Outline O fEars
+ctx.fillStyle = "rgb(0, 0, 0)";
+rect(310, 300, 470, 90);
+
 // Rectangle Behind Head for Ears
 ctx.fillStyle = "rgb(100, 100, 100)";
 rect(310, 300, 460, 80);
@@ -28,9 +32,14 @@ triangle(420, 80, 380, 100, 460, 100, "stroke");
 // Filled Triangle for Neck
 triangle(300, 200, 220, 600, 380, 600, "fill");
 
+// Rectangle Outline Of Head
+ctx.fillStyle = "rgb(0, 0, 0)";
+rect(300, 300, 410, 410);
+
 // Rectangle Head
 ctx.fillStyle = "rgb(180, 180, 180)";
 rect(300, 300, 400, 400);
+
 
 // Filled Circle for Left Eye Socket
 ctx.fillStyle = "rgb(235, 235, 235)";
@@ -40,20 +49,38 @@ ctx.fillStyle = "rgb(235, 235, 235)";
 //circle(400, 250, 50, "fill");
 
 // Rectangle for Mouth
-rect(300, 380, 200, 60);
+rect(300, 380, 400, 60);
 
-// Horizontal Line for Teeth
-ctx.strokeStyle = "rgb(180, 180, 180)";
-line(200, 380, 400, 380);
+// First Triangle for Teeth
+ctx.fillStyle = "rgb(180, 180, 180)";
+triangle(100, 350, 150, 400, 200, 350, "fill");
 
-// First Vertical Line for Teeth
-line(250, 350, 250, 410);
+// Second Triangle for Teeth
+triangle(200, 350, 250, 400, 300, 350, "fill");
 
-// Second Vertical Line for Teeth
-line(300, 350, 300, 410);
+// Third Triangle for Teeth
+triangle(300, 350, 350, 400, 400, 350, "fill");
 
-// Third Vertical Line for Teeth
-line(350, 350, 350, 410);
+// Fourth Triangle for Teeth
+triangle(400, 350, 450, 400, 500, 350, "fill");
+
+// Recantle Of The Lower Quater Of The Head
+ctx.fillStyle = "rgb(200, 200, 200)";
+rect(300, 455, 400, 90);
+
+
+// // Horizontal Line for Teeth
+// ctx.strokeStyle = "rgb(180, 180, 180)";
+// line(200, 380, 400, 380);
+
+// // First Vertical Line for Teeth
+// line(250, 350, 250, 410);
+
+// // Second Vertical Line for Teeth
+// line(300, 350, 300, 410);
+
+// // Third Vertical Line for Teeth
+// line(350, 350, 350, 410);
 
 // Filled Ellipse for Left Eye
 ctx.fillStyle = "rgb(255, 255, 255)"
